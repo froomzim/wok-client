@@ -1,0 +1,17 @@
+<div class="row w-100 col-12 profile-bar flex-row-reverse " *ngIf="this.profile">
+  <div class="col-4 text-center">
+    <img src="../../../assets/models/nftperfil.png" class="rounded-circle profile-pic" alt="Cinque Terre">
+  </div>
+
+  <div class="col-8">
+    <div class="row">
+      <h1 class="profile-name">{{ this.profile.name }}</h1>
+    </div>
+    <div class="row">
+      <h3 class="profile-civilization">Civilization: {{ this.profile.civilization['name'] }}</h3>
+    </div>
+    <div class="row">
+      <h3 class="profile-level">Level: {{ this.profile.civilization_level['level'] }}</h3>
+    </div>
+  </div>
+</div>

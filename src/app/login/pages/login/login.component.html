@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Login with MetaMask</mat-card-title>
+  <mat-card-content>
+
+      <p *ngIf="" class="error">
+
+      </p>
+
+      <div class="button">
+        <button (click)="submit()" mat-button>Login</button>
+      </div>
+      <m-web3-modal title="Meta">
+
+      </m-web3-modal>
+  </mat-card-content>
+</mat-card>

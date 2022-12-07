@@ -1,0 +1,111 @@
+main {
+  display: block
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto
+}
+
+.game-item .game-item-inner {
+  display: flex;
+  flex-wrap: wrap
+}
+
+.game-item .game-item-inner {
+  position: relative
+}
+
+.game-item .game-overlay {
+  position: absolute;
+  content: ""
+}
+
+.game-item .game-item-inner {
+  height: 100%
+}
+
+.game-item .game-item-inner {
+  justify-content: center
+}
+
+.game-item .game-item-inner {
+  align-items: center
+}
+
+.game-item {
+  background-size: cover;
+  background-position: center;
+  height: 330px;
+  transition: .3s all linear;
+}
+
+.game-item .game-item-inner.bg-1 {
+  background: #4a009a;
+  background: radial-gradient(circle, #4a009a 0%, #080223 100%)
+}
+
+.game-item .game-item-inner.bg-2 {
+  background: #bfb964;
+  background: radial-gradient(circle, #bfb964 0%, #29310e 100%)
+}
+
+.game-item .game-item-inner.bg-3 {
+  background: #37c1d5;
+  background: radial-gradient(circle, #37c1d5 0%, #080e37 100%)
+}
+
+.game-item .game-item-inner.bg-4 {
+  background: #df4910;
+  background: radial-gradient(circle, #df4910 0%, #f5c802 100%)
+}
+
+.game-item .game-item-inner.bg-5 {
+  background: #6dc79c;
+  background: radial-gradient(circle, #6dc79b 0%, #003127 100%)
+}
+
+.game-item .game-item-inner.bg-6 {
+  background: #f06b27;
+  background: radial-gradient(circle, #f06b27 0%, #161717 100%)
+}
+
+.game-item .game-item-inner.bg-7 {
+  background: #29a7ce;
+  background: radial-gradient(circle, #29a7ce 0%, #161717 100%)
+}
+
+.game-item .game-item-inner.bg-8 {
+  background: #c41f0e;
+  background: radial-gradient(circle, #c41f0e 0%, #161717 100%)
+}
+
+.game-item .game-overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .45s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  display: grid;
+  place-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background-color: rgba(0, 0, 0, .8)
+}
+
+.game-item:hover .game-overlay {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1)
+}
+
+.civilization {
+  cursor: pointer;
+}

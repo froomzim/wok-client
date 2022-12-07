@@ -1,0 +1,20 @@
+#attacking {
+  color: red;
+  opacity: 0;
+  font-family: fantasy;
+  font-size: 5em;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.menu-window {
+  margin: 30px;
+  background-color: rgba(20, 11, 11, 0.959);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.363);
+  max-height: 500px;
+  min-width: 40%;
+  overflow-y: auto;
+}

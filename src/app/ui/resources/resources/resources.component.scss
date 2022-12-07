@@ -1,0 +1,14 @@
+.resource-pic {
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.resource-amount {
+  align-self: center;
+  color: white;
+  margin-left: 10px;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}

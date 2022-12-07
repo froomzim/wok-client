@@ -1,0 +1,68 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "target": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "path": [
+        "./node_modules/path-browserify"
+      ],
+      "src/*": [
+        "./src/*"
+      ],
+      "model/*": [
+        "./src/app/model/*"
+      ],
+      "zlib": [
+        "./node_modules/browserify-zlib"
+      ],
+      "http": [
+        "./node_modules/stream-http"
+      ],
+      "os": [
+        "./node_modules/os-browserify"
+      ],
+      "https": [
+        "./node_modules/https-browserify"
+      ],
+      "assert": [
+        "./node_modules/assert"
+      ],
+      "jquery": [
+        "./node_modules/jquery"
+      ],
+      "stream": [
+        "./node_modules/stream-browserify"
+      ],
+      "crypto": [
+        "./node_modules/crypto-browserify"
+      ]
+    },
+    "jsx": "react"
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "types": [
+      "node"
+    ],
+  }
+}

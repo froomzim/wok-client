@@ -1,0 +1,78 @@
+<div class="debug-box col-3" *ngIf="!(this.isFocused | async) && this.profile">
+  <div class="row">
+    <div class="col-12">
+      <h5 class="debug-title">Change Place</h5>
+    </div>
+    <div class="col-4">
+      <button [ngClass]="this.profile['place'] == 'Mountain' ?  'btn btn-success' : 'btn btn-dark'" class="w-100"
+        (click)="changeCivilizationPlace('Mountain')">Mountain</button>
+    </div>
+
+    <div class="col-4">
+      <button [ngClass]="this.profile['place'] == 'Lake' ?  'btn btn-success' : 'btn btn-dark'" class="w-100"
+        (click)="changeCivilizationPlace('Lake')">Lake</button>
+    </div>
+
+    <div class="col-4">
+      <button [ngClass]="this.profile['place'] == 'Common' ?  'btn btn-success' : 'btn btn-dark'" class="w-100"
+        (click)="changeCivilizationPlace('Common')">Common</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h5 class="debug-title">Change Civilization</h5>
+    </div>
+    <div class="col-3">
+      <button [ngClass]="this.profile.civilization['name'] == 'Vikings' ?  'btn btn-success' : 'btn btn-dark'"
+        (click)="changeCivilization('74300ef0-0fa2-4237-9525-c9a45e6405d7')">Vikings</button>
+    </div>
+
+    <div class="col-3">
+      <button [ngClass]="this.profile.civilization['name'] == 'Greeks' ?  'btn btn-success' : 'btn btn-dark'"
+        (click)="changeCivilization('355f15cb-317c-4ad2-87c0-f804964c2a6d')">Greeks</button>
+    </div>
+
+    <div class="col-3">
+      <button [ngClass]="this.profile.civilization['name'] == 'Orientals' ?  'btn btn-success' : 'btn btn-dark'"
+        class="w-100" (click)="changeCivilization('d16b5f8a-d0ee-46ed-b730-824be78cef59')">Orientals</button>
+    </div>
+
+    <div class="col-3">
+      <button [ngClass]="this.profile.civilization['name'] == 'Romans' ?  'btn btn-success' : 'btn btn-dark'"
+      class="w-100"
+        (click)="changeCivilization('e09d32bc-18a5-4dc8-8010-24547caea139')">Romans</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h5 class="debug-title">Change Level</h5>
+    </div>
+    <div class="col-4">
+      <button [ngClass]="this.profile.civilization_level['level'] == 1 ? 'btn btn-success' : 'btn btn-dark'"
+        class="w-100" (click)="changeUserLevel(1)">1</button>
+    </div>
+
+    <div class="col-4">
+      <button [ngClass]="this.profile.civilization_level['level'] == 2 ? 'btn btn-success' : 'btn btn-dark'"
+        class="w-100" (click)="changeUserLevel(2)">2</button>
+    </div>
+
+    <div class="col-4">
+      <button [ngClass]="this.profile.civilization_level['level'] == 3 ? 'btn btn-success' : 'btn btn-dark'"
+        class="w-100" (click)="changeUserLevel(3)">3</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h5 class="debug-title">Simulate Attack</h5>
+    </div>
+    <div class="col-12">
+      <button *ngIf="this.profile.civilization_level['level'] == 3" class="btn btn-danger w-100"
+        (click)="attack()">Start</button>
+      <p class="text-center" *ngIf="this.profile.civilization_level['level'] != 3">Just on Level 3</p>
+    </div>
+  </div>
+</div>

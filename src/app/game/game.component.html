@@ -1,0 +1,12 @@
+<app-ui-manager></app-ui-manager>
+
+<div class="">
+  <div *ngIf="!(this.isLoaded|async)" fxLayout="column" fxLayoutAlign="center bottom"
+    style="position: absolute; width: 100%; height: 100%; background-color: rgb(48, 45, 45); z-index: 9999;">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <h1 class="text-white">{{ xhr }}</h1>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+</div>

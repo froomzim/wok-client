@@ -1,0 +1,94 @@
+<div class="row training-box" *ngIf="data">
+  <div class="d-flex">
+    <div class="col-10 training-title">
+      <h1>Your Army</h1>
+    </div>
+    <div class="col-2 justify-content-center">
+      <!-- rounded button  -->
+      <button *ngIf="army" class="btn btn-primary btn-lg btn-block" (click)="startTraining()">
+        👥
+      </button>
+
+      <button *ngIf="create_troops" class="btn btn-primary btn-lg btn-block" (click)="myArmy()">
+        ⚔️
+      </button>
+
+    </div>
+  </div>
+
+  <div *ngIf="army">
+    <div class="row training-content" *ngFor="let army_troop of this.armies">
+
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <h3>{{ army_troop['name'] }}</h3>
+          </div>
+          <div class="col-12" *ngFor="let level of toArray(army_troop['amount'])">
+            <div class="row">
+              <div class="col-6">
+                <p>Level: {{ level['level'] }}</p>
+              </div>
+              <div class="col-6">
+                <p>Amount: {{ level['quantity'] }}</p>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <img src="{{ army_troop['photo'] }}" alt="{{ army_troop['name'] }}" />
+      </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-center training-content">
+      <div class="col-4">
+        <h3>Army Number</h3>
+      </div>
+      <div class="col-8 align-self-center">
+        <div class="progress position-relative">
+          <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar"
+            [ngStyle]="{'width': data['total'] + '%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <small class="justify-content-center d-flex position-absolute w-100 progress-text">
+            {{ data['total']}}/100</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="create_troops">
+    <div class="row training-content" *ngFor="let troop of this.troops">
+      <div class="row">
+        <div class="col-10">
+          <h3>{{ troop['name'] }}</h3>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary btn-lg btn-block h-80" (click)="createTroop(troop['id'])">
+            Create
+          </button>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <p>{{ troop['description'] }}</p>
+          </div>
+          <div class="row">
+            <p>Preferred target: {{ troop['preferred_target'] }} | Type: {{ troop['type'] }}</p>
+          </div>
+          <div class="row">
+            <p>Attack: 80 | Defense: 35 | Healthpoints: 1500</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-2">
+        <div class="row">
+          <img src="{{ troop['photo'] }}" alt="{{ troop['name'] }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

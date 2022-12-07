@@ -1,0 +1,11 @@
+stages:
+  - build
+  - deploy
+
+include:
+  - project: inovedados-devops/gitlab-ci
+    ref: development
+    file:
+      - build-image-and-push.yaml
+      - deploy.yaml
+

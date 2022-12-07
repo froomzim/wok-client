@@ -1,0 +1,60 @@
+<section class="padding-top padding-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center mb-5 text-uppercase">
+      <div class="text-center mb-5">
+        <h1>This is Your First Access!</h1>
+        <h5>Choose Your Civilization and Type</h5>
+      </div>
+      <div class="row g-4 justify-content-center civilization">
+        <div class="col-lg-3 col-md-4 col-sm-6 " (click)="chooseCivilization('Vikings')">
+          <div class="game-item">
+            <div class="game-item-inner bg-5">
+              <div class="game-thumb">
+                <img src="https://cdn-icons-png.flaticon.com/512/3426/3426206.png" alt="game-img">
+              </div>
+              <div class="game-overlay">
+                <h4><a class="text-white">Vikings</a> </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 civilization" (click)="chooseCivilization('Romans')">
+          <div class="game-item">
+            <div class="game-item-inner bg-6">
+              <div class="game-thumb">
+                <img src="https://cdn-icons-png.flaticon.com/512/2720/2720080.png" alt="game-img">
+              </div>
+              <div class="game-overlay">
+                <h4><a class="text-white">Romans</a> </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 civilization" (click)="chooseCivilization('Greeks')">
+          <div class="game-item">
+            <div class="game-item-inner bg-7">
+              <div class="game-thumb">
+                <img src="https://cdn-icons-png.flaticon.com/512/2229/2229993.png" alt="game-img">
+              </div>
+              <div class="game-overlay">
+                <h4><a class="text-white">Greeks</a> </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 civilization" (click)="chooseCivilization('Orientals')">
+          <div class="game-item">
+            <div class="game-item-inner bg-8">
+              <div class="game-thumb">
+                <img src="https://cdn-icons-png.flaticon.com/512/1387/1387407.png" alt="game-img">
+              </div>
+              <div class="game-overlay">
+                <h4><a class="text-white">Orientals</a> </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

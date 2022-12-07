@@ -1,0 +1,40 @@
+.profile-bar {
+  margin-top: 10px;
+  background-color: rgba(20, 11, 11, 0.267);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.363);
+
+}
+
+.profile-pic {
+  height: 150px !important;
+  width: 150px !important;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.363);
+}
+
+.profile-name {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.profile-civilization {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.644),
+    -1px 1px 0 rgb(253, 253, 253, 0.644),
+    1px -1px 0 rgb(255, 255, 255, 0.644),
+    -1px -1px 0 rgb(255, 255, 255, 0.644);
+}
+
+.profile-level {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.644),
+  -1px 1px 0 rgb(253, 253, 253, 0.644),
+  1px -1px 0 rgb(255, 255, 255, 0.644),
+  -1px -1px 0 rgb(255, 255, 255, 0.644);
+}
+
+.profile-data {
+  margin-top: 10px;
+  margin-left: 80px;
+  color: whitesmoke;
+}

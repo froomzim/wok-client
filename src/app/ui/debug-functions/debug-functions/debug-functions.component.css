@@ -1,0 +1,23 @@
+
+.debug-box {
+  background-color: rgba(20, 11, 11, 0.267);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.363);
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+.debug-title {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.debug-attack-btn {
+  border-radius: 20px;
+  width: 100%;
+}

@@ -1,0 +1,83 @@
+<div class="row entrance-title">
+  <h1>Entrance</h1>
+</div>
+
+<div class="entrance-content">
+  <div class="row m-1">
+    <div class="col-12 text-center">
+      <h4>Active Tasks</h4>
+    </div>
+
+    <div class="col-8">
+      <h6>Mining:</h6>
+    </div>
+    <div class="col-4">
+      <div *ngIf="mining < 30" class="progress position-relative">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="mining" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">{{ mining }}</small>
+      </div>
+
+      <div *ngIf="mining < 100 && mining > 30" class="progress position-relative">
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="mining" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">{{ mining }}</small>
+      </div>
+      <div *ngIf="mining >= 100" class="progress position-relative">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="mining" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">DONE</small>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <h6>Defending:</h6>
+    </div>
+    <div class="col-4">
+      <div *ngIf="defending < 30" class="progress position-relative">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="defending" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">{{ defending }}</small>
+      </div>
+
+      <div *ngIf="defending < 100 && defending > 30" class="progress position-relative">
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="defending" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">{{ defending }}</small>
+      </div>
+      <div *ngIf="defending >= 100" class="progress position-relative">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="defending" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">DONE</small>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <h6>Upgrading Kingdom:</h6>
+    </div>
+    <div class="col-4">
+      <div *ngIf="kingdom < 30" class="progress position-relative">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="kingdom" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">
+          {{ kingdom | number: '1.0-1' }}
+        </small>
+      </div>
+
+      <div *ngIf="kingdom < 100 && kingdom > 30" class="progress position-relative">
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="mining" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">{{ kingdom | number: '1.0-1'
+          }}</small>
+      </div>
+      <div *ngIf="kingdom >= 100" class="progress position-relative">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+          [style.width.%]="mining" aria-valuemin="0" aria-valuemax="100"></div>
+        <small class="justify-content-center d-flex position-absolute w-100 progress-text">DONE</small>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
